@@ -16,11 +16,7 @@ const getPosts = async (user) => {
 
 const getCommentsForEachPost = async (posts) => {
   const res = await Promise.all(posts.map(post => 
-<<<<<<< HEAD
-    fetch(`${url}/comments?postId=${post.id}&_limit=3`)  
-=======
     fetch(`${url}/comments?postId=${post.id}&_limit=4`)  
->>>>>>> 3f8728df5e31f2b73f884ac661cb19e090afb105
   ))
   const postComments = await Promise.all(res.map(r => r.json()));
   
@@ -60,3 +56,7 @@ getBlogContent();
 const loadAdds = () => {
   console.log("Adds loaded");
 }
+
+// cambio 1
+// cambio 2
+// cambio 3
